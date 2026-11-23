@@ -58,7 +58,7 @@ export function PrizeCard({ prize }: PrizeCardProps) {
             <PixelGift gift={prize.gift} scale={5} />
           </div>
 
-          <blockquote className="text-3xl leading-tight text-balance sm:text-4xl">
+          <blockquote className="[font-family:var(--font-dm-sans)] text-3xl leading-tight text-balance sm:text-4xl">
             “{prize.text}”
           </blockquote>
 

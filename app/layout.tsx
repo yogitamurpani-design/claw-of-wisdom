@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
-import { Pixelify_Sans } from "next/font/google";
+import { DM_Sans, Pixelify_Sans } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/8bit/tooltip";
 import "./globals.css";
 
 const pixelify = Pixelify_Sans({
   variable: "--font-pixelify",
+  subsets: ["latin"],
+});
+
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
 });
 
@@ -16,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${pixelify.variable} h-full antialiased`}>
+    <html lang="en" className={`${pixelify.variable} ${dmSans.variable} h-full antialiased`}>
       <body className="min-h-full">
         <TooltipProvider>{children}</TooltipProvider>
         <Toaster position="bottom-center" />
