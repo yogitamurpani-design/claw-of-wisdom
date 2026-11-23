@@ -490,7 +490,7 @@ export function ClawMachine() {
                 ref={dropBtn}
                 onClick={play}
                 disabled={busy}
-                className={cn("bg-bubblegum px-5 py-6 text-sm text-ink hover:bg-bubblegum/85", locked && "opacity-50")}
+                className={cn("bg-bubblegum py-5 pr-6 pl-[26px] text-sm text-ink hover:bg-bubblegum/85", locked && "opacity-50")}
               >
                 DROP!
               </Button>
