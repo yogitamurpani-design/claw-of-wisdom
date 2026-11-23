@@ -4,8 +4,8 @@ import { GIFTS, PixelGift } from "@/components/claw/sprites";
 export default function Home() {
   return (
     <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col gap-12 px-4 py-10 sm:px-8 sm:py-14">
-      <header className="flex flex-col gap-5">
-        <div className="flex items-center gap-4">
+      <header className="flex flex-col items-center gap-5 text-center">
+        <div className="flex items-center justify-center gap-4">
           <div className="anim-bob hidden sm:block" aria-hidden="true">
             <PixelGift gift={GIFTS[1]} scale={5} />
           </div>
@@ -15,7 +15,7 @@ export default function Home() {
             </h1>
           </div>
         </div>
-        <p className="max-w-2xl text-xl leading-snug text-muted-foreground">
+        <p className="mx-auto max-w-2xl text-xl leading-snug text-muted-foreground">
           Insert a coin, pick a vibe and steer the claw. Every gift box hides a quote: a push of
           motivation, a little life advice or something silly.
         </p>      </header>
