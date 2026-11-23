@@ -306,9 +306,9 @@ export function ClawMachine() {
   const moveMs = phase === "carrying" ? T.carry : T.back;
 
   return (
-    <div className="grid items-start gap-12 lg:grid-cols-[minmax(0,460px)_minmax(0,1fr)]">
-      {/* ── machine column ── */}
-      <section aria-label="Claw machine" className="flex flex-col gap-6">
+    <div className="mx-auto flex w-full max-w-[460px] flex-col items-stretch gap-12">
+      {/* ── machine ── */}
+      <section aria-label="Claw machine" className="flex w-full flex-col gap-6">
         {/* HUD */}
         <div className="pixel-box-lift relative bg-card p-4">
           <div className="retro flex items-center justify-between gap-3 text-[10px]">
@@ -510,8 +510,8 @@ export function ClawMachine() {
         </div>
       </section>
 
-      {/* ── prize column ── */}
-      <section ref={prizeRef} aria-label="Your quote" className="flex flex-col gap-6 lg:sticky lg:top-8">
+      {/* ── prize ── */}
+      <section ref={prizeRef} aria-label="Your quote" className="flex w-full flex-col gap-6">
         <div className="flex items-center justify-between gap-3">
           <h2 className="retro text-xs">2. YOUR PRIZE</h2>
           <Badge className="bg-butter text-[8px]">WON: {inventory.length}</Badge>
